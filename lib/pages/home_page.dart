@@ -26,8 +26,9 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: buildAppBar(),
       floatingActionButton: FloatingActionButton(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         elevation: 2,
-        backgroundColor: AppColors.primario,
+        backgroundColor: AppColors.verde.withOpacity(0.5),
         heroTag: 'add',
         child: Icon(Icons.add, color: AppColors.blanco),
         onPressed: () {
