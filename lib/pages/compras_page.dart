@@ -13,9 +13,15 @@ class ComprasPage extends StatelessWidget {
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  GastosAnteriores(),
+                  Divider(
+                    thickness: 2,
+                    indent: 50,
+                    endIndent: 50,
+                  ),
                   Text('\$3,285.74',
                       style: TextStyle(
-                        color: AppColors.texto,
+                        color: AppColors.textoTenue,
                         fontWeight: FontWeight.bold,
                         fontSize: 40.0,
                       )),
@@ -31,12 +37,6 @@ class ComprasPage extends StatelessWidget {
                   Expanded(
                     child: CardsBoxCompras(),
                   ),
-                  Divider(
-                    thickness: 2,
-                    indent: 50,
-                    endIndent: 50,
-                  ),
-                  GastosAnteriores(),
                 ]),
           ),
         ));

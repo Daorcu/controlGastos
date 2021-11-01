@@ -6,10 +6,11 @@ class GastosAnteriores extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 170,
-      alignment: Alignment.topCenter,
+      height: 130,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
+          SizedBox(height: 10),
           Text(
             'Gastos anteriores',
             style: TextStyle(

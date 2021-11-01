@@ -11,6 +11,7 @@ class CardBox {
   Color? iconColor;
   Color? btnColor;
   String? total;
+  List<Map<String, dynamic>>? desc;
   String? percent;
 
   bool isLast;
@@ -23,6 +24,7 @@ class CardBox {
     this.iconColor,
     this.btnColor,
     this.total,
+    this.desc,
     this.percent,
     this.isLast = false,
   });
@@ -105,15 +107,44 @@ class CardBox {
   static List<CardBox> generateCardBoxCompras() {
     return [
       CardBox(
-        iconData: FontAwesomeIcons.dollarSign,
-        title: 'Ingresos',
-        titleColor: AppColors.blanco,
-        bgColor: AppColors.cafe.withOpacity(0.5),
-        iconColor: Colors.white,
-        btnColor: AppColors.neutro,
-        total: '\$30.4 K',
-        percent: '100%',
-      ),
+          iconData: FontAwesomeIcons.dollarSign,
+          title: 'Ingresos',
+          titleColor: AppColors.blanco,
+          bgColor: AppColors.cafe.withOpacity(0.5),
+          iconColor: Colors.white,
+          btnColor: AppColors.neutro,
+          total: '\$30.4 K',
+          percent: '100%',
+          desc: [
+            {
+              'time': '10:23 am',
+              'title': 'Zapatos en Flexi',
+              'slot': '10:00 - 11:00:',
+              'tlColor': AppColors.secundario,
+              'bgColor': AppColors.neutro,
+            },
+            {
+              'time': '11:23 am',
+              'title': 'Zapatos en Flexi',
+              'slot': '10:00 - 11:00:',
+              'tlColor': AppColors.secundario,
+              'bgColor': AppColors.neutro,
+            },
+            {
+              'time': '12:23 pm',
+              'title': 'Comprando comida Italiana',
+              'slot': '12:00 - 13:00 pm',
+              'tlColor': AppColors.secundario,
+              'bgColor': AppColors.neutro,
+            },
+            {
+              'time': '1:23 pm',
+              'title': 'Zapatos en Flexi',
+              'slot': '1:00 - 2:00 pm:',
+              'tlColor': AppColors.secundario,
+              'bgColor': AppColors.neutro,
+            },
+          ]),
       CardBox(
         iconData: FontAwesomeIcons.creditCard,
         title: 'Hogar',
